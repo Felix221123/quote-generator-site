@@ -10,4 +10,5 @@ This site is designed to generate inspiring and thought-provoking quotes at the 
 *HTML 
 *CSS
 *SASS
+*SCSS
 *JAVASCRIPT
