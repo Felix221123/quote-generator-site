@@ -132,4 +132,20 @@ body {
   body {
     background: url("img/bg_desktop.jpg") no-repeat center center/cover;
   }
+}
+@media (max-height: 350px) {
+  body {
+    padding: 2rem 1.5rem;
+  }
+  .container {
+    display: grid;
+    row-gap: 0.5rem;
+  }
+  .container .header_of_content > h2 {
+    padding: 1rem 2rem;
+  }
+  .container > .main-content {
+    padding: 1.5rem 1.5rem;
+    row-gap: 1.2rem;
+  }
 }/*# sourceMappingURL=styles.css.map */
