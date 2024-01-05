@@ -102,13 +102,19 @@ const Quotes = [
 
 //code to allow the button to generate random quotes based on the numnber generated
 //from the array length
+let lastRandom = -1; // Initialize with a value that won't match any index
+
 btn.addEventListener('click', function() {
+    let random;
 
-    //this will generate a random number 
-    //from 0 to the length of the quote
-    let random = Math.floor(Math.random() * Quotes.length)
+    do {
+        // Generate a random number from 0 to the length of the quote
+        random = Math.floor(Math.random() * Quotes.length);
+    } while (random === lastRandom); // Keep generating until it's different
 
-    //to make it display the quote and the author on the screen when the button is clicked
+    lastRandom = random; // Update the last displayed quote index
+
+    // Display the quote and the author on the screen
     quoteText.innerText = '"' + Quotes[random].quote + '"';
-    authorPerson.innerText = Quotes[random].author ;
-})
+    authorPerson.innerText = Quotes[random].author;
+});
